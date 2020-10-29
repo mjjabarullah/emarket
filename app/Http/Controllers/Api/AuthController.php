@@ -25,6 +25,8 @@ class AuthController extends Controller
                 'message' => 'Unauthorized'
             ], 401);
 
+        $user1 = new User();
+
         $user = $request->user();
         $tokenResult = $user->createToken('Personal Access Token');
         $token = $tokenResult->token;
